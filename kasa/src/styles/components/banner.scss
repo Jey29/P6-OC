@@ -1,0 +1,13 @@
+.banner{
+    @include verticalCenter;
+    background: url(../../assets/img/falaises.png) center/cover;
+    height: 223px;   
+    width: 1240px;
+    border-radius: 25px;
+
+
+    h1{
+        color: $white;
+    }
+
+}

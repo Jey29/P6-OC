@@ -1,0 +1,17 @@
+.navigation {
+    ul {
+        display: flex;
+        a{
+            text-decoration: none;
+            
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.nav-active {
+    position: relative;
+
+    
+}
