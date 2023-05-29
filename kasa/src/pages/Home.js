@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Banner from "../components/Banner";
 import Logo from "../components/Logo";
+import Footerbanner from "../components/Footerbanner";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
       <main>
         <Banner />
       </main>
-      <footer></footer>
+      <footer>
+        <Footerbanner />
+      </footer>
     </div>
   );
 };

@@ -1,12 +1,18 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
+import Footerbanner from "../components/Footerbanner";
 
 const About = () => {
   return (
     <div>
-      <Logo />
-      <Navigation />
+      <header>
+        <Logo />
+        <Navigation />
+      </header>
+      <footer>
+        <Footerbanner />
+      </footer>
     </div>
   );
 };
