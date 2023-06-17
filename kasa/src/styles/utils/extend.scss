@@ -1,0 +1,31 @@
+%columnCenterFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+%columnCenterFlexNoWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%js-spacearoundFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+%js-spacearoundFlex-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+%margin-auto {
+  margin: 0 auto;
+}

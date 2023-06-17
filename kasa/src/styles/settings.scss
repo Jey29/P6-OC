@@ -1,11 +1,34 @@
 @font-face {
-    font-family: "font-1";
+    font-family: 'Montserrat';
     src: url("../assets/font/Montserrat-Medium.ttf");
 }
 
-$font-1: "font-1", sans-serif;
-$color-1: rgba(255, 96, 96, 1);
-$white: white;
+$generic-size-xs: 8px;
+$generic-size-s: 16px;
+$generic-size-m: 24px;
+$generic-size-l: 32px;
+$generic-size-xl: 40px;
+$generic-size-xxl:48px;
+
+$font-xs: 10px;
+$font-s: 12px;
+$font-sm:13px;
+$font-m: 14px;
+$font-l: 16px;
+$font-xl: 18px;
+$font-xxl: 24px;
+$font-3xl: 36px;
+$font-giant: 48px;
+
+$fw-medium: 500;
+$fw-sm-b: 600;
+$fw-b: bold;
+
+$color-screen : #FFFFFF;
+$color-1: #FF6060;
+$color-2: #F6F6F6;
+$color-3: #666666;
+$color-4: #000000;
 
 @mixin verticalCenter {
     display: flex;
@@ -16,21 +39,88 @@ $white: white;
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
+#root {
+    height: 100%;
+  }
 header{
-    margin-top: 40px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 20px;
     display:flex ;
     justify-content: space-between;    
 }
+.main-home, .main-about, .main-accommodation {
+    padding-bottom: 250px;
+  }
 
 body{
-    background: $white;
-    font-family: $font-1;
-    color: $color-1;
+    background: $color-screen;
+    font-family: 'Montserrat',
+    sans-serif;
+    height: 100%;
+    position: relative;
+    @extend %margin-auto;
 }
-li{
-    list-style-type: none;
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  header{
+   margin: 20px auto;
+   width: 90%;
+  }       
+  .navigation{
+   padding-left: 80px;
+  }
+  .navigation ul {
+   font-size: 24px;
+  }
+  .cover h1{
+   padding-top: 20px;
+  } 
+  .slideshow{
+   width: 100%;
+  }
+ }
+ 
+ @media screen and (min-width: 992px){
+  .cover{
+   height: 223px;
+  }
+  .slideshow{
+    min-height: 415px;
+  }
+  .slideshow-images{
+    min-height: 415px;
+    height: 415px;
+  }
+  .Collapse{
+    width: 80%;
+  }
+  .duo-Collapse{
+    display: flex;
+    justify-content: space-between;
+  }
+  .Collapse-right{
+    padding-left: 40px;
+  } 
+  .Collapse-left{
+    padding-right: 40px;
+  } 
+ }
+ 
+ @media screen and (min-width: 1200px){
+  .Collapse-right{
+    padding-left: 80px;
+  } 
+  .Collapse-left{
+    padding-right: 80px;
+  }
+ }
+ 
+ @media screen and (min-width: 1440px){
+ 
+ }
+

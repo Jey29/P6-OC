@@ -1,9 +1,10 @@
-import React from "react";
+// import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Accommodation from "./pages/Accommodation";
 import Error from "./pages/Error";
+// const jsonData = require("./datas/apartments.json");
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/accommodation" element={<Accommodation />} />
+        <Route path="/accommodation/:id" element={<Accommodation />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
