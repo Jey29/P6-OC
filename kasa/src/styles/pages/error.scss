@@ -15,6 +15,9 @@
     font-size: $font-m;
     margin-top: 100px;
     list-style: none;
+    @media screen and (min-width: 992px){
+      font-size: $font-xl;
+    }
   }
   
   .error-number {
@@ -23,10 +26,16 @@
       width: 198px;
       height: 99px;
       margin-bottom: $generic-size-s;
+      @media screen and (min-width: 992px){
+        height: 260px;
+        width: 600px;
+        margin-bottom: $generic-size-l;
+      }
     }
+    
   }
-  
-  .error-explanation {
+    
+  .error-paragraphe {
     p {
       display: block;
       width: 60%;
@@ -35,10 +44,11 @@
       margin: auto;
       text-align: center;
       padding: 0 10px;
+      @media screen and (min-width: 992px){
+        font-size: $font-3xl;
+        height: auto;
+        width: 100%;
+      }
     }
-  }
-  
-  .error-paragraphe {
-    @extend .error-explanation;
   }
   

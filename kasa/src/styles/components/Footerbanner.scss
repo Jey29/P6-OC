@@ -10,6 +10,9 @@
     p {
       color: $color-screen;
       font-size: $font-s;
+      @media screen and (min-width: 992px){
+        font-size: $font-xxl;
+      }
     }
   
     .logofooter {

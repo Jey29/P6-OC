@@ -2,8 +2,15 @@
     min-width: 335px;
     width: 90%;
     min-height: 255px;
+    height: 100%;
     margin: $generic-size-s auto 0;
     position: relative;
+    @media screen and (min-width: 768px){
+      width: 100%;      
+    }
+    @media screen and (min-width: 992px){
+      min-height: 415px;
+    }
   
     &-arrow {
       position: absolute;
@@ -11,9 +18,9 @@
       top: 50%;
       transform: translateY(-50%);
       width: 24px;
-      height: 24px;
+      height: auto;
       border: none;
-      background: transparent;
+      background: transparent;     
   
       &.left {
         left: 1.5vh;
@@ -30,6 +37,9 @@
       height: 255px;
       min-width: 335px;
       width: 100%;
+      @media screen and (min-width: 992px){
+        min-height: 415px;
+      }
   
       img {
         position: absolute;

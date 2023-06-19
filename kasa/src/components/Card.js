@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import AppartData from "../datas/apartments.json";
 import { NavLink } from "react-router-dom";
 
 const Card = () => {
-  const [data, setData] = useState(AppartData);
-  console.log(data);
   return (
     <div className="gallerycard">
-      {data.map((item, i) => (
+      {AppartData.map((item, i) => (
         <div className="card" key={i}>
           <h2>{item.title}</h2>
           <div className="covercard">

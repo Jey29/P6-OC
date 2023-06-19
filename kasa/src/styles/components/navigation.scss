@@ -1,22 +1,37 @@
 .navigation {  
   display: flex;
   align-items: center; 
-  width: 40%;   
+  width: 40%; 
+  @media screen and (min-width: 768px){
+    padding-left: 80px;
+  }   
+  @media screen and (min-width: 992px){
+    padding-left: 120px;
+  } 
+  @media screen and (min-width: 1200px){
+    padding-left: 160px;
+  }
     ul {
         list-style: none;       
         display: flex;
         flex-grow: 1;
-        justify-content: space-around;
-                     
+        justify-content: space-around;                   
 
         a{
-            text-decoration: none;
-            font-size: large;
-            
+            text-decoration: none;           
             li {
                 cursor: pointer;
                 color: $color-1;
                 font-size: $font-s;
+                @media screen and (min-width: 768px){
+                  font-size: $font-l ;
+                }
+                @media screen and (min-width: 992px){
+                  font-size: $font-xl;
+                }
+                @media screen and (min-width: 1200px){
+                  font-size: $font-xxl;
+                }
             }
         }
     }

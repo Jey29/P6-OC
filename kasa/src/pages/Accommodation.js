@@ -34,36 +34,40 @@ const Accommodation = () => {
         <Slideshow images={apartment.pictures} />
         <section className="section-accommodation">
           <div className="bloc-infos">
-            <div className="infos-bien">
-              <h2>{apartment.title}</h2>
-              <p className="location">{apartment.location}</p>
-              <div className="tags-bloc">
-                {apartment.tags.map((tag, index) => (
-                  <div key={`tag_${index}`} className="tags">
-                    <p>{tag}</p>
-                  </div>
-                ))}
+            <div className="bloc-owner-infos">
+              <div className="infos-bien">
+                <h2>{apartment.title}</h2>
+                <p className="location">{apartment.location}</p>
+                <div className="tags-bloc">
+                  {apartment.tags.map((tag, index) => (
+                    <div key={`tag_${index}`} className="tags">
+                      <p>{tag}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="owner-bloc">
-              <div className="starSnippets-bloc">
-                {Array.from({ length: 5 }, (_, index) => (
+              <div className="owner-bloc">
+                <div className="starSnippets-bloc">
+                  {Array.from({ length: 5 }, (_, index) => (
+                    <img
+                      key={`rating_${index}`}
+                      src={
+                        index < apartment.rating
+                          ? RatingStar
+                          : RatingStarInactive
+                      }
+                      alt="rating"
+                    />
+                  ))}
+                </div>
+                <div className="host">
+                  <p className="name">{apartment.host.name}</p>
                   <img
-                    key={`rating_${index}`}
-                    src={
-                      index < apartment.rating ? RatingStar : RatingStarInactive
-                    }
-                    alt="rating"
+                    className="picture-owner"
+                    src={apartment.host.picture}
+                    alt="host"
                   />
-                ))}
-              </div>
-              <div className="host">
-                <p className="name">{apartment.host.name}</p>
-                <img
-                  className="picture-owner"
-                  src={apartment.host.picture}
-                  alt="host"
-                />
+                </div>
               </div>
             </div>
             <div className="duo-Collapse">

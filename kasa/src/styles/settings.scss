@@ -47,7 +47,11 @@ $color-4: #000000;
 header{
     margin: 20px;
     display:flex ;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    @media screen and (min-width: 768px){
+      margin: 20px auto;
+      width: 90%;
+    }   
 }
 .main-home, .main-about, .main-accommodation {
     padding-bottom: 250px;
@@ -66,61 +70,25 @@ body{
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
-  header{
-   margin: 20px auto;
-   width: 90%;
-  }       
-  .navigation{
-   padding-left: 80px;
-  }
-  .navigation ul {
-   font-size: 24px;
-  }
-  .cover h1{
-   padding-top: 20px;
-  } 
-  .slideshow{
-   width: 100%;
-  }
- }
  
- @media screen and (min-width: 992px){
-  .cover{
-   height: 223px;
-  }
-  .slideshow{
-    min-height: 415px;
-  }
-  .slideshow-images{
-    min-height: 415px;
-    height: 415px;
-  }
-  .Collapse{
-    width: 80%;
-  }
-  .duo-Collapse{
-    display: flex;
-    justify-content: space-between;
-  }
-  .Collapse-right{
-    padding-left: 40px;
-  } 
-  .Collapse-left{
-    padding-right: 40px;
-  } 
- }
+//  @media screen and (min-width: 992px){
+//   .starSnippets-bloc img{
+//     margin-left: 10px;
+//   } 
+//   .Collapse-right{
+//     padding-left: 40px;
+//   } 
+//   .Collapse-left{
+//     padding-right: 40px;
+//   } 
+//  }
  
- @media screen and (min-width: 1200px){
-  .Collapse-right{
-    padding-left: 80px;
-  } 
-  .Collapse-left{
-    padding-right: 80px;
-  }
- }
- 
- @media screen and (min-width: 1440px){
- 
- }
+//  @media screen and (min-width: 1200px){
+//     .Collapse-right{
+//     padding-left: 80px;
+//   } 
+//   .Collapse-left{
+//     padding-right: 80px;
+//   }
+//  }
 

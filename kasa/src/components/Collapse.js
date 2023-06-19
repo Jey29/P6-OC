@@ -10,7 +10,7 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div>
+    <div className="Collapse-unite">
       <div className="tittlearrow">
         <h2>{title}</h2>
         <img
